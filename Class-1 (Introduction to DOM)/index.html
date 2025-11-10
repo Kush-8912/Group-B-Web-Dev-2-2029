@@ -15,11 +15,26 @@
     }
   </style>
   <body>
-    <button class="inActive">I am Inactive</button>
+    <button  class="inActive">Button Deactivated</button>
   </body>
 
   <script>
-        
+        // select the button
+    const btn = document.querySelector('button')
+
+    btn.addEventListener('click' , function(){
+       if(btn.classList.contains('inActive')){
+          btn.classList.remove('inActive')
+          btn.classList.add('active')
+          btn.innerText = 'Button Activated'
+       }else{
+         btn.classList.remove('active')
+         btn.classList.add('inActive')
+         btn.innerText = 'Button Deactivated'
+       }
+    })
+       
+     
 
   </script>
 </html>
