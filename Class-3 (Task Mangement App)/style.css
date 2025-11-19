@@ -106,17 +106,29 @@ action-btn-cont {
     color: white;
 }
 
+.main-cont{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .ticket-cont{
-    
+  margin: 2.5rem;
+  height: 10rem;
+  width: 16rem;
+  background-color: yellow;
+  border-radius: 10%;
 }
 
 .ticket-color{
-
+   background-color: lightpink;
+   height:1rem ;
+   border-radius: 10%;
 }
 
 
 .ticket-id{
-
+  background-color:salmon ;
+  height: 2rem;
 }
 
 .task-area{
