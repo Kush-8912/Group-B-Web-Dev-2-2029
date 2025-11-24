@@ -2,6 +2,7 @@
 // Selected Elements
 const addBtn = document.querySelector(".add-btn");
 const modalCont = document.querySelector(".modal-cont");
+const modalTaskArea = document.querySelector('.textArea-cont')
 
 //flags
 let modalFlag = false;
@@ -21,3 +22,13 @@ addBtn.addEventListener("click", function () {
 
   // Modal Hides
 });
+
+
+// 
+modalCont.addEventListener('keydown' , function(e){
+   
+  
+  if(e.key=='Shift'){
+    console.log(modalTaskArea.value)
+  }
+})
