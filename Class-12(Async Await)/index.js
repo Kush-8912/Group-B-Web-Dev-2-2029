@@ -22,5 +22,33 @@ function generateBill(callback) {
 
 // Execution
 
+function serveOrderCallback() {
+  placeOrder(
+    "coffee",
+    function (orderPlaced) {
+      console.log(orderPlaced);
+
+      processOrder(orderPlaced, function (orderReady) {
+        console.log(orderReady);
+
+        generateBill(function (billGenerated) {
+          console.log(billGenerated);
+        });
+      });
+    },
+    function (error) {
+      console.log(error);
+    }
+  );
+}
+
+serveOrderCallback();
 
 
+// placeOrder(() => {
+//     processOrder(() => {
+//       generateBill(() => {
+    
+//       });
+//     });
+//   }); // callback hell
