@@ -1,3 +1,6 @@
+// All and allSettled
+
+
 function fetchUserData() {
   return new Promise((resolve) => {
     setTimeout(() => resolve({ userId: 1, username: "JohnDoe" }), 1000);
@@ -65,3 +68,13 @@ Promise.allSettled([
 
 
 // try to figure out where to us all and allSettled
+
+
+//  ✅ Promise.all → When all results are mandatory. 
+// (e.g., payment transaction requires user, 
+// account, and bank API all to succeed)
+
+// ✅ Promise.allSettled → 
+// When partial results are acceptable. 
+// (e.g., news feeds, weather data from multiple APIs, 
+// product price comparisons)
