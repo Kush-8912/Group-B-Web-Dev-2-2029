@@ -1,18 +1,4 @@
-Perfect.
-I’ll now **rewrite and upgrade your Async/Await class into the same “Beginner → Internals → Interview-ready” master notes style** that we used for:
 
-* Async Programming 1 (Event Loop)
-* Async Programming 2 (Promises)
-
-I will:
-
-* Keep **your flow, examples, and questions**
-* Improve **clarity, structure, and pacing**
-* Add **behind-the-scenes details** (event loop, microtasks, libuv)
-* Clearly explain **why async/await exists**
-* Highlight **mental models, gotchas, and interview traps**
-
-You can **teach directly from this document**.
 
 ---
 

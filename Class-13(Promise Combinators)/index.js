@@ -13,7 +13,7 @@ function fetchUserPosts(data) {
 function fetchUserComments() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      let success = Math.random() > 0.1; // 50% chance of failure
+      let success = Math.random() > 1; 
       if (success) {
         resolve(["Nice!", "Interesting post", "Subscribed!"]);
       } else {
@@ -39,10 +39,17 @@ function fetchUserComments() {
 
 // Promise.all
 
-Promise.all([fetchUserData(), fetchUserPosts(), fetchUserComments()]).then(
-  function (results) {
+// all or nothing 
+
+Promise.all([fetchUserData(), fetchUserPosts(), fetchUserComments()])
+  .then(function (results) {
     console.log(results[0]);
     console.log(results[1]);
-    console.log(results[2])
-  }
-);
+    console.log(results[2]);
+  })
+  .catch(function (err) {
+    console.log("An Error occured ->" + err);
+  });
+
+
+  
